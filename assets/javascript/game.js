@@ -7,6 +7,7 @@ var totalScore = 0;
 var wins = 0;
 var losses = 0;
 
+//function to choose random number for user to match
 function randomNumber() {
    computerNumber = Math.floor((Math.random() * 100) + 19);
     $('#randomNumber').html(computerNumber); 
@@ -18,6 +19,7 @@ $(document).ready(function() {
 
     buttonValue();
 
+    //checking conditions on click event and increment the wins or losses.
     $('#red').on('click', function() {
         totalScore += red;
         if (totalScore === computerNumber) {
@@ -88,6 +90,7 @@ $(document).ready(function() {
 
 });
 
+//Created a function to generate random values for the buttons
 function buttonValue() {
     red = Math.floor((Math.random() * 12) + 1);
     // $('#red').append(red);
@@ -99,8 +102,8 @@ function buttonValue() {
     // $('#yellow').append(yellow);
 }
 
+//function to reset all the values
 function reset() {
-
     randomNumber();
     buttonValue();
     totalScore = 0;
