@@ -7,10 +7,14 @@ var totalScore = 0;
 var wins = 0;
 var losses = 0;
 
+function randomNumber() {
+   computerNumber = Math.floor((Math.random() * 100) + 19);
+    $('#randomNumber').html(computerNumber); 
+}
+
 $(document).ready(function() {
 
-    computerNumber = Math.floor((Math.random() * 100) + 19);
-    $('#randomNumber').append(computerNumber);
+    randomNumber();
 
     buttonValue();
 
@@ -18,12 +22,16 @@ $(document).ready(function() {
         totalScore += red;
         if (totalScore === computerNumber) {
             wins++;
-            $('#wins').append('wins : ' + wins);
+            alert("Yayy...You Won!!!");
+            $('#wins').html(wins);
+            reset();
         } else if (totalScore > computerNumber) {
             losses++;
-            $('#losses').append('losses : ' + losses);
+            alert("Ohhh...You Lost!!!");
+            $('#losses').html(losses);
+            reset();
         }
-        $('#totalScore').append(totalScore+'\n');
+        $('#totalScore').html(totalScore+'\n');
 
     });
 
@@ -31,12 +39,16 @@ $(document).ready(function() {
         totalScore += blue;
         if (totalScore === computerNumber) {
             wins++;
-            $('#wins').append('wins : ' + wins);
+            alert("Yayy...You Won!!!");
+            $('#wins').html(wins);
+            reset();
         } else if (totalScore > computerNumber) {
             losses++;
-            $('#losses').append('losses : ' + losses);
+            alert("Ohhh...You Lost!!!");
+            $('#losses').html(losses);
+            reset();
         }
-        $('#totalScore').append(totalScore+'\n');
+        $('#totalScore').html(totalScore+'\n');
 
     });
 
@@ -44,12 +56,16 @@ $(document).ready(function() {
         totalScore += green;
         if (totalScore === computerNumber) {
             wins++;
-            $('#wins').append('wins : ' + wins);
+            alert("Yayy...You Won!!!");
+            $('#wins').html(wins);
+            reset();
         } else if (totalScore > computerNumber) {
             losses++;
-            $('#losses').append('losses : ' + losses);
+            alert("Ohhh...You Lost!!!");
+            $('#losses').html(losses);
+            reset();
         }
-        $('#totalScore').append(totalScore+'\n');
+        $('#totalScore').html(totalScore+'\n');
 
     });
 
@@ -57,12 +73,16 @@ $(document).ready(function() {
         totalScore += yellow;
         if (totalScore === computerNumber) {
             wins++;
-            $('#wins').append('wins : ' + wins);
+            alert("Yayy...You Won!!!");
+            $('#wins').html(wins);
+            reset();
         } else if (totalScore > computerNumber) {
             losses++;
-            $('#losses').append('losses : ' + losses);
+            alert("Ohhh...You Lost!!!");
+            $('#losses').html(losses);
+            reset();
         }
-        $('#totalScore').append(totalScore+'\n');
+        $('#totalScore').html(totalScore+'\n');
 
     });
 
@@ -70,11 +90,18 @@ $(document).ready(function() {
 
 function buttonValue() {
     red = Math.floor((Math.random() * 12) + 1);
-    $('#red').append(red);
+    // $('#red').append(red);
     blue = Math.floor((Math.random() * 12) + 1);
-    $('#blue').append(blue);
+    // $('#blue').append(blue);
     green = Math.floor((Math.random() * 12) + 1);
-    $('#green').append(green);
+    // $('#green').append(green);
     yellow = Math.floor((Math.random() * 12) + 1);
-    $('#yellow').append(yellow);
+    // $('#yellow').append(yellow);
+}
+
+function reset() {
+
+    randomNumber();
+    buttonValue();
+    totalScore = 0;
 }

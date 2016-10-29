@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
 
 </head>
 <body>
@@ -15,30 +16,37 @@
 		<div class="row">
 			<div class="col-md-12 a"><div class="b"><p>Crystal Collectors!!!</p></div></div>
 		</div>
-		<div class="row">
-			<div class="col-md-12">You will be given a random number at the start of the game.<br> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.<br>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.<br>The value of each crystal is hidden from you until you click on it.<br>Each time when the game starts, the game will change the values of each crystal.</div>
+		<div class="row seperate">
+			<div class="col-md-12 rules"># Rules :<br>You will be given a random number at the start of the game.<br> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.<br>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.<br>The value of each crystal is hidden from you until you click on it.<br>Each time when the game starts, the game will change the values of each crystal.</div>
 		</div>
 		<div class="row">
-			<div class="col-md-9" id="randomNumber"></div>
-			<div class="col-md-3">
-				<div id="wins"></div>
-				<div id="losses"></div>
+			<div class="col-md-6 random" id="randomNumber"></div>
+			<div class="col-md-6">
+			  <div class="win" >
+				<div>Wins : <span id="wins"></span></div>
+				<div>Losses : <span id="losses"></span></div>
+			  </div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-3" id="red"><button class="btn"><img src="assets/images/bgimg2.jpg" width="30" height="40"></button></div>
-			<div class="col-md-3" id="blue"><button class="btn"><img src="assets/images/bgimg2.jpg" width="30" height="40"></button></div>
-			<div class="col-md-3" id="yellow"><button class="btn"><img src="assets/images/bgimg2.jpg" width="30" height="40"></button></div>
-			<div class="col-md-3" id="green"><button class="btn"><img src="assets/images/bgimg2.jpg" width="30" height="40"></button></div>
+			<div class="col-md-3" id="red">
+<!-- <button type="button" class="btn btn-default btn-lg">Large button</button> -->
+            <button type="button" class="btn btn-default btn-lg"><img src="assets/images/red.jpg" width="100" height="60"></button></div>
+			<div class="col-md-3" id="blue"><button class="btn btn-default btn-lg"><img src="assets/images/blue.jpg" width="100" height="60"></button></div>
+			<div class="col-md-3" id="yellow"><button class="btn btn-default btn-lg"><img src="assets/images/green.jpg" width="100" height="60"></button></div>
+			<div class="col-md-3" id="green"><button class="btn btn-default btn-lg"><img src="assets/images/yellow.jpg" width="100" height="60"></button></div>
 		</div>
 		<div class="row">
-			<div class="col-md-12">Your Total Score is: </div>
+			<div class="col-md-12 random">Your Total Score is: </div>
 		</div>
 		<div class="row">
-			<div class="col-md-12" id="totalScore"></div>
+			<div class="col-md-12 random" id="totalScore"></div>
 		</div>
 	</div>
-	
+	<div>    
+
+<p></p>
+	</div>
 	
 </body>
 </html>
